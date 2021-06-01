@@ -62,10 +62,10 @@ The contents are oganized as follows:
 
 
 ## Reference
-[1] *G. Tzanetakis and P. Cook, “Musical genre classification of audio signals,” IEEE Trans. Speech and Audio Processing, vol. 10, no. 5, pp. 293–302, 2002.*
+*[1] G. Tzanetakis and P. Cook, “Musical genre classification of audio signals,” IEEE Trans. Speech and Audio Processing, vol. 10, no. 5, pp. 293–302, 2002.*
 
 *[2] S. B¨ock, F. Krebs, and G. Widmer, “Joint beat and downbeat tracking with recurrent neural networks,” Proc. Int. Soc. Music Inf. Retr. Conf., pp. 255–261, 2016.*
 
-[3] *R. Hennequin, F. V. A. Khlif, and M. Moussallam, “Spleeter: A fast and state-of-the art music source separation tool with pre-trained models,” J. Open Source Softw., 2020.*
+*[3] R. Hennequin, F. V. A. Khlif, and M. Moussallam, “Spleeter: A fast and state-of-the art music source separation tool with pre-trained models,” J. Open Source Softw., 2020.*
 
-[4] https://github.com/deezer/spleeter
+*[4] https://github.com/deezer/spleeter*
