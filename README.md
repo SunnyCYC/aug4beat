@@ -48,7 +48,7 @@ The contents are oganized as follows:
     * HMM optimization:
         * After finishing training of several models, users may use the following scripts to find best parameters of HMM for each trained model.   
         * run organize_hmmopt_todolist.py : to generate a list of model containing the model directories for the optimization process.
-        * run hmmopt.py : to find the best parameters and save for each model.
+        * run hmmopt.py : to find the best parameters and save for each model. Note that larger search space (i.e. temp_range, transition_lambda_range, etc.)could be assigned in the script to find best parameters for your models. Current space is reduced to save time.
         * run organize_hmmopt_bestparams.py: to organize best parameters of all models into a .csv file.
         * run Inference.py: read the .csv file and conduct beat/downbeat tracking using the models included.
 
