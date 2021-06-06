@@ -30,7 +30,7 @@ The contents are oganized as follows:
             * OnlyDrum/
             * NoDrum/
 * usage of the scripts: please follow the below steps in order to generate drum/non-drum data and the adopted input features.
-    * run trainteset_split.py :
+    * run traintset_split.py :
         * you may assign ratio of test set and valid set before run the script
         * the script will glob all wav paths of current datasets, and generate required .txt for the following procedures
     * run source_separation_aug4beat.py :
