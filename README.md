@@ -57,6 +57,7 @@ The contents are oganized as follows:
         * run hmmopt.py : to find the best parameters and save for each model. Note that larger search space (i.e. temp_range, transition_lambda_range, etc.) could be assigned in the script to find best parameters for your models. Current space is reduced to save time.
         * run organize_hmmopt_bestparams.py: to organize best parameters of all models into a .csv file.
         * run Inference.py: read the .csv file and conduct beat/downbeat tracking using the models included.
+        * **Note: since this repo only adopts 10 songs for training (as a demo), the model may not be trained well. A totally failed model could produce empty f-score during executoin of hmmopt.py and stop you from going further. Try upload more traning data or repeat traning a few times to solve this problem.**
 
 
     
