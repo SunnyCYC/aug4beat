@@ -30,7 +30,7 @@ The contents are oganized as follows:
             * OnlyDrum/
             * NoDrum/
 * usage of the scripts: please follow the below steps in order to generate drum/non-drum data and the adopted input features.
-    * run traintset_split.py :
+    * run traintest_split.py :
         * you may assign ratio of test set and valid set before run the script
         * the script will glob all wav paths of current datasets, and generate required .txt for the following procedures
     * run source_separation_aug4beat.py :
@@ -45,6 +45,12 @@ The contents are oganized as follows:
         * train_2combABSM.py : can be used to train models augmented by drum stems selected by ABSM
         * train_3combOSFQ.py : can be used to train models augmented by non-drum stems and drum stems selected by OSFQ.
         * users may modified the provided scripts to manipulate the composition of training data or to change the experiment settings. 
+        * Note: please ensure the following code only collect folders of datasets.
+         `mix_dataset_dirs = os.listdir(mix_main_dir) `
+        Any unexpected folders (e.g. '.ipynb_checkpoints') could cause error, and should be excluded if generated. 
+            * ex. add code like below to exclude it 
+            `unwanted = ['.ipynb_checkpoints']`
+            `mix_dataset_dirs = list(set(mix_dataset_dirs)-set(unwanted))`
     * HMM optimization:
         * After finishing training of several models, users may use the following scripts to find best parameters of HMM for each trained model.   
         * run organize_hmmopt_todolist.py : to generate a list of model containing the model directories for the optimization process.
