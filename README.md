@@ -2,7 +2,7 @@
 
 This repo contains the source codes for paper titled 
 "*Source Separation-based Data Augmentation for Improved Joint Beat and Downbeat Tracking*".
-
+| [**Paper (arXiv)**](https://arxiv.org/abs/2106.08703) | [**Github**](https://github.com/SunnyCYC/aug4beat) |
 
 In this work, we investigate a source separation-based approach for data augmentation for joint beat and downbeat tracking. Specifically, to account for the composition of the training data in terms of the percussive and non-percussive sound sources, we propose to employ a blind drum separation model to segregate the drum and non-drum sounds from each training audio signal, filtering out training signals that are drumless, and then use the obtained drum and non-drum stems to augment the training data. Experiment results validate the effectiveness of the proposed method, and accordingly the importance of drum sound composition in the training data for beat and downbeat tracking.
 
