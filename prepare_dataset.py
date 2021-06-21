@@ -37,7 +37,8 @@ def main():
     datasets = []
     
     for dataset_dir in dataset_dir_list:
-        if not '/sourcesep_aug' in dataset_dir:
+        #if not '/sourcesep_aug' in dataset_dir: modified by Frank Wu on 2021/06/21
+        if not 'sourcesep_aug' in dataset_dir:
             datasets += glob.glob( os.path.join(dataset_dir, "*"))
         else:
             aug_datasets = glob.glob(os.path.join(dataset_dir, "*"))

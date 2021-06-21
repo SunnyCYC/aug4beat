@@ -266,7 +266,9 @@ def main():
         ## load the best model just trained
         state = torch.load(model_path, map_location = device)
         model.load_state_dict(state)
-        model.cuda(device.index)
+        if torch.cuda.is_available():
+            model.cuda(cuda_num)
+
         
         # csv save path
         csv_sdir = evaluation_folder

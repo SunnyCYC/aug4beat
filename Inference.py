@@ -13,6 +13,7 @@ import torch
 import numpy as np
 import librosa
 import pandas as pd
+import soundfile as sf
 
 
 from models.BaselineBLSTM import RNNDownBeatProc as bsl_blstm
@@ -100,7 +101,8 @@ def main():
     
             state = torch.load(model_path, map_location = device)
             rnn.load_state_dict(state)
-            rnn.cuda(device.index)
+            if torch.cuda.is_available():
+                rnn.cuda(device.index)
     
         ### DBN init
         hmm_proc = DownBproc(beats_per_bar = beats_per_bar, 
@@ -131,8 +133,8 @@ def main():
             ori_wav = get_wav(audio_file_path)
             click = librosa.clicks(times = beat, sr = 44100, length = len(ori_wav))
             click_wav = ori_wav + click
-            librosa.output.write_wav(os.path.join(txt_out_folder, os.path.basename(audio_file_path)), click_wav, sr = 44100)
-
+            #librosa.output.write_wav(os.path.join(txt_out_folder, os.path.basename(audio_file_path)), click_wav, sr = 44100)
+            sf.write(os.path.join(txt_out_folder, os.path.basename(audio_file_path)), click_wav, samplerate  = 44100)
 
 
 if __name__ == "__main__":

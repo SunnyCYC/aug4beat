@@ -105,7 +105,8 @@ def main():
     valid_loader = DataLoader( validset, batch_size = 2, shuffle = True)
     
     model = RNNmodel()
-    model.cuda(cuda_num)
+    if torch.cuda.is_available():
+        model.cuda(cuda_num)
 
     optimizer = torch.optim.SGD(
             model.parameters(),
